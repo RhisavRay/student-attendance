@@ -1,6 +1,16 @@
 import './App.css';
+import React, { useState } from 'react';
 
-function App() {
+function App()
+{
+
+  const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
+  const [rollNo, setRollNo] = useState('');
+  const [emailError, setEmailError] = useState('');
+  const [nameError, setNameError] = useState('');
+  const [rollNoError, setRollNoError] = useState('');
+
   return (
     <div className='app'>
       <div className='container'>
@@ -8,11 +18,11 @@ function App() {
           <form>
             <h2>Please enter your details to login</h2>
             <label htmlFor='email'>Email ID:</label>
-            <input type='email' id="email"></input>
+            <input type='email' id="email" required></input>
             <label htmlFor='name'>Name:</label>
-            <input type='text' id="name"></input>
+            <input type='text' id="name" required></input>
             <label htmlFor='rollNo'>Roll No:</label>
-            <input type='text' id='rollNo'></input>
+            <input type='text' id='rollNo' required></input>
             <div className='formBtn'>
               <button id='loginBtn' type='submit'>Login</button>
               <button id='clearBtn' type='reset'>Clear Form</button>
