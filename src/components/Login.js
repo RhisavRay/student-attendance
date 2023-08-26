@@ -1,9 +1,8 @@
 import './Login.css';
 import React, { useState } from 'react';
 
-function Login()
+function Login({onLogin})
 {
-
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [rollNo, setRollNo] = useState('');
@@ -18,6 +17,8 @@ function Login()
     const rollNoPattern = /^[a-zA-Z0-9]+$/;
     if (!rollNo.match(rollNoPattern))
       setRollNoError('Roll No must be alphanumeric');
+    else
+      onLogin();
   }
 
   return (
