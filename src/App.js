@@ -7,12 +7,17 @@ function App()
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [rollNo, setRollNo] = useState('');
-  const [emailError, setEmailError] = useState('');
-  const [nameError, setNameError] = useState('');
   const [rollNoError, setRollNoError] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Reset error message
+    setRollNoError('');
+
+    const rollNoPattern = /^[a-zA-Z0-9]+$/;
+    if (!rollNo.match(rollNoPattern))
+      setRollNoError('Roll No must be alphanumeric');
   }
 
   return (
@@ -31,6 +36,7 @@ function App()
 
             <label htmlFor='rollNo'>Roll No:</label>
             <input type='text' id='rollNo' required value={rollNo} onChange={(e) => setRollNo(e.target.value)}/>
+            {rollNoError && <p className='error'>{rollNoError}</p>}
 
             <div className='formBtn'>
               <button id='loginBtn' type='submit'>Login</button>
