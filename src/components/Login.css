@@ -1,8 +1,10 @@
-*, *::before, *::after {
+*, *::before, *::after
+{
   box-sizing: border-box;
 }
 
-body {
+body
+{
   margin: 0;
   background: #8bedef;
 }
