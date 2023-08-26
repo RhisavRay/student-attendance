@@ -1,0 +1,57 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #8bedef;
+}
+
+.container
+{
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 20px;
+  padding: 15px;
+  border-radius: 25px;
+  max-height: 90%;
+}
+
+.container img
+{
+  width: 50%;
+  border-radius: 15px;
+  aspect-ratio: 413 / 620;
+}
+
+form
+{
+  background-color: rgb(236, 236, 236);
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+}
+
+form h2
+{
+  text-align: center;
+}
+
+form input
+{
+  font-size: 20px;
+  width: 90%;
+}
+
+.formBtn
+{
+  display: flex;
+  justify-content: space-evenly;
+}
