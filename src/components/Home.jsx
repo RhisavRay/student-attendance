@@ -1,7 +1,9 @@
+// import './Home.css';
+
 function Home()
 {
     return(
-        <div>
+        <div className="container">
             <h1>Choose the subject and its timings to mark attendance</h1>
         </div>
     )

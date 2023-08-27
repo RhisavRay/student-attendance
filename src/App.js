@@ -12,7 +12,7 @@ function App()
 
   return(
     <div>
-    {isLoggedIn ? (<Home/>) : (<Login onLogin={handleLogin}/>)}
+    {isLoggedIn ? <Home/> : <Login onLogin={handleLogin}/>}
     </div>
   )
 }
