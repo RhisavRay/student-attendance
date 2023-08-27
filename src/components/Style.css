@@ -126,11 +126,23 @@ form input
   width: 60%;
 }
 
-.confirmation-message {
+.confirmation-message
+{
   position: fixed;
   top: 0;
   right: 0;
   background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  z-index: 999;
+}
+
+.error-message
+{
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #d43636;
   color: white;
   padding: 10px;
   z-index: 999;
