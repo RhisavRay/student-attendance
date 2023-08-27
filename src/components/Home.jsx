@@ -10,11 +10,7 @@ function Home()
         setIsSubmitted(true);
         setTimeout(() => {
             setIsSubmitted(false);
-        }, 1000);
-    }
-
-    const handleLogout = () => {
-
+        }, 2000);
     }
 
     return(
