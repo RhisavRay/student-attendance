@@ -53,7 +53,7 @@ function Home()
                     <input type="text" id="facultyName" required/>
                 </div>
 
-                <button type="submit" id="loginBtn">Present!</button>
+                <button type="submit" id="loginBtn">Mark Attendance</button>
                 <button type="reset" id="clearBtn">Clear form</button>
             </form>
 
