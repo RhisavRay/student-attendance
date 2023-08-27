@@ -3,17 +3,18 @@ import { useState } from "react";
 function Home()
 {
     const [isSubmitted, setIsSubmitted] = useState(false);
-    const [error, setError] = useState(false);
-    const [subject, setSubject] = useState("");
-    const [time, setTime] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-            setIsSubmitted(true);
-            setTimeout(() => {
-                setIsSubmitted(false);
-            }, 1000);
+        setIsSubmitted(true);
+        setTimeout(() => {
+            setIsSubmitted(false);
+        }, 1000);
+    }
+
+    const handleLogout = () => {
+
     }
 
     return(
@@ -22,7 +23,7 @@ function Home()
             <form onSubmit={handleSubmit}>
             <div className="form-section">
                     <label htmlFor="subject">Subject</label>
-                    <select id="subject" value={subject} required onChange={(e) => setSubject(e.target.value)}>
+                    <select id="subject" required>
                         <option value="">*SELECT AN OPTION*</option>
                         <option value="OS">Operating System</option>
                         <option value="DBMS">Database Managemen System</option>
@@ -34,7 +35,7 @@ function Home()
 
                 <div className="form-section">
                     <label htmlFor="time">Class timing</label>
-                    <select id="time" required value={time} onChange={(e) => setTime(e.target.value)}>
+                    <select id="time" required>
                         <option value="">*SELECT AN OPTION*</option>
                         <option value="P1">P1 - 8:00 to 8:50</option>
                         <option value="P2">P2 - 8:50 to 9:40</option>
@@ -63,12 +64,6 @@ function Home()
             {isSubmitted &&
                 <div className="confirmation-message">
                     Submission successful!
-                </div>
-            }
-
-            {error &&
-                <div className="error-message">
-                    You haven't filled all necessary details
                 </div>
             }
         </div>
