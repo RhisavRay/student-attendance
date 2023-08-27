@@ -112,3 +112,17 @@ form input
   display: flex;
   gap: 20px;
 }
+
+.container.home form
+{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 80%;
+  
+}
+
+.container.home form select
+{
+  width: 60%;
+}
