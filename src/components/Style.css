@@ -119,10 +119,19 @@ form input
   flex-direction: column;
   gap: 20px;
   width: 80%;
-  
 }
 
 .container.home form select
 {
   width: 60%;
+}
+
+.confirmation-message {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  z-index: 999;
 }

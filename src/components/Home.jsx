@@ -2,10 +2,20 @@ import { useState } from "react";
 
 function Home()
 {
+    const [isSubmitted, setIsSubmitted] = useState(false);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setIsSubmitted(true);
+        setTimeout(() => {
+            setIsSubmitted(false);
+          }, 3000);
+    }
+
     return(
         <div className="container home">
             <h1>Choose carefully and mark your attendance</h1>
-            <form>
+            <form onSubmit={handleSubmit}>
             <div className="form-section">
                     <label htmlFor="subject">Subject</label>
                     <select id="subject" required>
@@ -19,8 +29,8 @@ function Home()
                 </div>
 
                 <div className="form-section">
-                    <label>Class timing</label>
-                    <select required>
+                    <label htmlFor="time">Class timing</label>
+                    <select id="time" required>
                         <option>*SELECT AN OPTION*</option>
                         <option>P1 - 8:00 to 8:50</option>
                         <option>P2 - 8:50 to 9:40</option>
@@ -38,13 +48,18 @@ function Home()
                 </div>
 
                 <div className="form-section">
-                    <label>Faculty Name</label>
-                    <input type="text" required/>
+                    <label htmlFor="facultyName">Faculty Name</label>
+                    <input type="text" id="facultyName" required/>
                 </div>
 
                 <button type="submit" id="loginBtn">Present!</button>
                 <button type="reset" id="clearBtn">Clear form</button>
             </form>
+            {isSubmitted && (
+        <div className="confirmation-message">
+          Submission successful!
+        </div>
+      )}
         </div>
     )
 }
