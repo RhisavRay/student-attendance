@@ -76,11 +76,17 @@ form input
 #loginBtn
 {
   background-color: #92e062;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 #clearBtn
 {
   background-color: #da5c5c;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 #loginBtn:hover
@@ -189,4 +195,11 @@ tbody
   background-color: #545454;
   color: white;
   border-radius: 25px;
+}
+
+.switch
+{
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
 }
