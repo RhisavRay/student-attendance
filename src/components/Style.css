@@ -96,13 +96,13 @@ form input
   transition: all 0.2s ease-in-out;
 }
 
-.container.home
+.container.mark
 {
   flex-direction: column;
   align-items: center;
 }
 
-.container.home h1
+.container.mark h1
 {
   text-align: center;
 }
@@ -113,7 +113,7 @@ form input
   gap: 20px;
 }
 
-.container.home form
+.container.mark form
 {
   display: flex;
   flex-direction: column;
@@ -121,7 +121,7 @@ form input
   width: 80%;
 }
 
-.container.home form select
+.container.mark form select
 {
   width: 60%;
 }
