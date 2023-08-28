@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react';
 
+import Switch from './Switch';
+
 function Mark()
 {
     const [isSubmitted, setIsSubmitted] = useState(false);
@@ -63,8 +65,10 @@ function Mark()
                     Submission successful!
                 </div>
             }
+
+            <Switch/>
         </div>
     )
 }
 
-export default Mark
+export default Mark;

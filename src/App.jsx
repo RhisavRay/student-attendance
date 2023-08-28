@@ -1,5 +1,7 @@
 import Login from "./components/Login";
-import Home from "./components/Home";
+import Dashboard from "./components/Dashboard";
+import Mark from "./components/Mark"
+
 import { useState } from "react";
 
 function App()
@@ -12,7 +14,7 @@ function App()
 
   return(
     <div>
-    {isLoggedIn ? <Home/> : <Login onLogin={handleLogin}/>}
+    {isLoggedIn ? <Mark/> : <Login onLogin={handleLogin}/>}
     </div>
   )
 }
