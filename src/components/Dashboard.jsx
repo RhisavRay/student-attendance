@@ -1,8 +1,21 @@
 import React from 'react'
 
-const Dashboard = () => {
+import Switch from './Switch'
+
+function Dashboard ({onSwitch})
+{
+  const handleClick = () => {
+    onSwitch();
+  }
+
   return (
-    <div className='container dash'>Dashboard</div>
+    <div className='container dash'>
+      <table className='dashTable'>
+        <thead></thead>
+      </table>
+
+      <Switch onSwitch={handleClick} text="Mark Attendance"/>
+    </div>
   )
 }
 

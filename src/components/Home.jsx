@@ -7,13 +7,17 @@ function Home()
 {
     const [switchBtn, setSwitchBtn] = useState(false);
 
-    const handleSwitch = () => {
+    const goToDashboard = () => {
         setSwitchBtn(true);
+    }
+
+    const goToAttendance = () => {
+        setSwitchBtn(false);
     }
 
     return(
         <div className="home">
-            {switchBtn ? <Dashboard/> : <Mark onSwitch={handleSwitch}/>}
+            {switchBtn ? <Dashboard onSwitch={goToAttendance}/> : <Mark onSwitch={goToDashboard}/>}
         </div>
     )
 }
