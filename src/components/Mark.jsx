@@ -14,7 +14,7 @@ function Mark({onSwitch, logout})
         setIsSubmitted(true);
         setTimeout(() => {
             setIsSubmitted(false);
-        }, 2000);
+        }, 3000);
     }
 
     const handleClick = () => {
