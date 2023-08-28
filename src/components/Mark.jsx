@@ -68,7 +68,7 @@ function Mark({onSwitch})
                 </div>
             }
 
-            <Switch onSwitch={handleClick} text="Go to Dashboard"/>
+            <Switch onSwitch={handleClick} text="View Attendance"/>
         </div>
     )
 }
