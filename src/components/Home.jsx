@@ -5,9 +5,15 @@ import Dashboard from "./Dashboard";
 
 function Home()
 {
+    const [switchBtn, setSwitchBtn] = useState(false);
+
+    const handleSwitch = () => {
+        setSwitchBtn(true);
+    }
+
     return(
         <div className="home">
-            <Mark/>
+            {switchBtn ? <Dashboard/> : <Mark onSwitch={handleSwitch}/>}
         </div>
     )
 

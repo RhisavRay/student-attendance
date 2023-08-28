@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 import Switch from './Switch';
 
-function Mark()
+function Mark({onSwitch})
 {
     const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -14,6 +14,10 @@ function Mark()
         setTimeout(() => {
             setIsSubmitted(false);
         }, 2000);
+    }
+
+    const handleClick = () => {
+        onSwitch();
     }
 
     return(
@@ -66,7 +70,7 @@ function Mark()
                 </div>
             }
 
-            <Switch/>
+            <Switch onSwitch={handleClick} text="Go to Dashboard"/>
         </div>
     )
 }

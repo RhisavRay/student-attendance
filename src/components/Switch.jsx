@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Switch = ({onClick, text}) => {
+const Switch = ({onSwitch, text}) => {
   return (
     <div>
-        <button class="switch" onClick={onClick}>
+        <button class="switch" onClick={onSwitch}>
             {text}
         </button>
     </div>
