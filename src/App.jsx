@@ -1,5 +1,4 @@
 import Login from "./components/Login";
-import Dashboard from "./components/ViewAtt";
 import Home from "./components/Home";
 
 import { useState } from "react";
