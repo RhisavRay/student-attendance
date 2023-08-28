@@ -142,3 +142,39 @@ form input
 {
   color: red;
 }
+
+.container.dash
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+table
+{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td
+{
+  text-align: center;
+  border: 1px solid Black;
+  padding: 10px;
+}
+
+.green
+{
+  color: green;
+}
+
+.red
+{
+  color: red;
+}
+
+tbody
+{
+  background-color: #E6E6AF;
+}

@@ -28,11 +28,9 @@ function Mark({onSwitch})
                     <label htmlFor="subject">Subject</label>
                     <select id="subject" required>
                         <option value="">*SELECT AN OPTION*</option>
-                        <option value="OS">Operating System</option>
-                        <option value="DBMS">Database Managemen System</option>
-                        <option value="FIR">Forensic Investigation and Research</option>
-                        <option value="Rob">Robotics</option>
                         <option value="SG">Security Governance</option>
+                        <option value="AD">Application Development</option>
+                        <option value="Rob">Robotics</option>
                     </select>
                 </div>
 
