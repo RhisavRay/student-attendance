@@ -137,3 +137,8 @@ form input
   border-radius: 20px;
   z-index: 999;
 }
+
+.error
+{
+  color: red;
+}
