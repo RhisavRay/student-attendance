@@ -24,6 +24,7 @@ function Home()
 
     const handleLogin = () => {
         setIsLoggedIn(false);
+        setLogout(false);
     }
 
     return(
