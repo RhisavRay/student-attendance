@@ -1,12 +1,17 @@
 import React from 'react'
 
 import Switch from './Switch'
+import LogoutSwitch from './LogoutBtn';
 
-function Dashboard ({onSwitch})
+function Dashboard ({onSwitch, logout})
 {
   const handleClick = () => {
     onSwitch();
   }
+
+  const handleLogout = () => {
+    logout();
+}
 
   return (
     <div className='container dash'>
@@ -50,8 +55,9 @@ function Dashboard ({onSwitch})
       </table>
 
       <Switch onSwitch={handleClick} text="Mark Attendance"/>
+      <LogoutSwitch logout={handleLogout}/>
     </div>
   )
 }
 
-export default Dashboard
+export default Dashboard;

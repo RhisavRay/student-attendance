@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import Mark from "./Mark";
-import Dashboard from "./Dashboard";
+import Dashboard from "./ViewAtt";
 import Login from "./Login";
 
 function Home()
@@ -28,7 +28,7 @@ function Home()
 
     return(
         <div className="home">
-            {logout ? <Login onLogin={handleLogin}/> : (switchBtn ? <Mark onSwitch={goToDashboard} logout={handleLogout}/> : <Dashboard onSwitch={goToAttendance}/>)}
+            {logout ? <Login onLogin={handleLogin}/> : (switchBtn ? <Mark onSwitch={goToDashboard} logout={handleLogout}/> : <Dashboard onSwitch={goToAttendance} logout={handleLogout}/>)}
         </div>
     )
 }
