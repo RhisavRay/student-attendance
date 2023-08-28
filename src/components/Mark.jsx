@@ -2,8 +2,9 @@ import React from 'react'
 import { useState } from 'react';
 
 import Switch from './Switch';
+import LogoutSwitch from './LogoutBtn';
 
-function Mark({onSwitch})
+function Mark({onSwitch, logout})
 {
     const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -18,6 +19,10 @@ function Mark({onSwitch})
 
     const handleClick = () => {
         onSwitch();
+    }
+
+    const handleLogout = () => {
+        logout();
     }
 
     return(
@@ -69,6 +74,7 @@ function Mark({onSwitch})
             }
 
             <Switch onSwitch={handleClick} text="View Attendance"/>
+            <LogoutSwitch logout={handleLogout}/>
         </div>
     )
 }
